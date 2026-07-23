@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
+<button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
     <main>
       <div class="resume">
         <div class="container">
@@ -166,5 +167,18 @@
         </div>
       </div>
     </main>
+<script>
+  const btn = document.getElementById('theme-toggle');
+  const body = document.body;
+  
+  btn.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+    if(body.classList.contains('dark-theme')) {
+      btn.innerText = '☀️ Light Mode';
+    } else {
+      btn.innerText = '🌙 Dark Mode';
+    }
+  });
+</script>
   </body>
 </html>
