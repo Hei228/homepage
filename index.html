@@ -167,6 +167,14 @@
         </div>
       </div>
     </main>
+<!-- Хакерська пасхалка -->
+  <div id="secret-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <img src="assets/easter.jpg" alt="They are watching you">
+      <p class="hacker-text">They are watching you. Stay secure.</p>
+    </div>
+  </div>
 <script>
   const btn = document.getElementById('theme-toggle');
   const body = document.body;
@@ -177,6 +185,27 @@
       btn.innerText = '☀️ Light Mode';
     } else {
       btn.innerText = '🌙 Dark Mode';
+    }
+  });
+// --- Hacker Easter Egg (Логіка пасхалки) ---
+  const avatar = document.querySelector('.contact-info__avatar');
+  const modal = document.getElementById('secret-modal');
+  const closeBtn = document.querySelector('.close-btn');
+
+  // Відкриваємо модальне вікно при кліку на аватар
+  avatar.addEventListener('click', () => {
+    modal.classList.add('show');
+  });
+
+  // Закриваємо модальне вікно при кліку на "X"
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('show');
+  });
+
+  // Закриваємо при кліку на темний фон навколо
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.classList.remove('show');
     }
   });
 </script>
