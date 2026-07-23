@@ -368,3 +368,29 @@ body.dark-theme svg {
   margin-top: 15px;
   font-size: 1.2em;
 }
+/* --- BACKROOMS BUTTON STYLES --- */
+.backrooms-btn {
+  display: none; /* За замовчуванням ховаємо кнопку */
+  text-align: center;
+  margin: 40px auto 20px; /* Відступи */
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #f39c12; /* Помаранчевий колір тексту */
+  border: 1px dashed #f39c12; /* Пунктирна помаранчева рамка */
+  border-radius: 5px;
+  text-decoration: none; /* Прибираємо підкреслення */
+  font-family: 'Courier New', Courier, monospace; /* Хакерський шрифт */
+  transition: 0.3s ease;
+  width: fit-content;
+}
+
+/* Кнопка з'являється ТІЛЬКИ коли на body є клас dark-theme */
+body.dark-theme .backrooms-btn {
+  display: block; 
+}
+
+.backrooms-btn:hover {
+  background-color: #f39c12;
+  color: #1a1a1a;
+  box-shadow: 0 0 10px #f39c12; /* Світіння при наведенні */
+}
